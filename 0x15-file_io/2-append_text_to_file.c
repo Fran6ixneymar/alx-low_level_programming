@@ -11,7 +11,8 @@ size_t _strlen(char *str)
 {
 	size_t fig;
 
-	for (fig = 0; str[fig]; fig++);
+	for (fig = 0; str[fig]; fig++)
+		;
 	return (fig);
 }
 
