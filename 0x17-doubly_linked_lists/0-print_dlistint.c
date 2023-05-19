@@ -11,10 +11,10 @@ size_t print_dlistint(const dlistint_t *h)
 {
 	size_t fig;
 
-	for (fig = 0; head != NULL; fig++)
+	for (fig = 0; h != NULL; fig++)
 	{
-		printf("%d\n", head->n);
-		head = head->next;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 	return (fig);
 }
