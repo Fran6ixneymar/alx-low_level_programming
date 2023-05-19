@@ -16,7 +16,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		return (NULL);
 	if (index == 0)
 		return (head);
-	for (fig = 0; i < index; fig++)
+	for (fig = 0; fig < index; fig++)
 	{
 		if (head->next == NULL)
 			return (NULL);

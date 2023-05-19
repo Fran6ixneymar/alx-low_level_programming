@@ -10,7 +10,7 @@ size_t dlistint_len(const dlistint_t *h)
 {
 	size_t fig;
 
-	for (fig = 0; head != NULL; fig++)
-		head = head->next;
-	return (head);
+	for (fig = 0; h != NULL; fig++)
+		h = h->next;
+	return (fig);
 }
