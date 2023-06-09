@@ -115,7 +115,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 	    key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
-	start = key_start((const unsigned char *)key, ht->size);
+	start = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->array[start];
 	while (tmp != NULL)
 	{
@@ -154,7 +154,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 	    key == NULL || strlen(key) == 0)
 		return (NULL);
-	start = key_start((const unsigned char *)key, ht->size);
+	start = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->array[start];
 	while (tmp != NULL)
 	{
